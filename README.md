@@ -3,6 +3,8 @@
 **DLW-Frontend** is the React-based user interface for the **DLW project**. This application allows users to **record and track their daily food intake, view nutritional analytics, and receive personalized recommendations** from the backend. The frontend interacts with the FastAPI backend:  
 🔗 **[DLW-Backend](https://github.com/jonechong/dlw-backend)**
 
+Unlike many existing applications, **DLW-Frontend is designed specifically for the Singaporean market**, addressing a major gap in food tracking and recommendation apps. It incorporates **local cuisine, common dietary habits, and region-specific nutritional considerations**, making it **highly relevant for Singapore-based users**.
+
 Although most core functionality is complete, an **analytics page**—designed to analyze user behavior (e.g., identifying days with consistent overeating) and optimize recommendations based on schedules—**is currently incomplete due to time constraints**.
 
 ---
@@ -12,6 +14,7 @@ Although most core functionality is complete, an **analytics page**—designed t
 ### **Food Tracking:**
 - Users can **add food items** (either via image upload or manual input) to record their daily intake.
 - Nutritional information is fetched automatically through the **FastAPI backend**.
+- **Recognizes local Singaporean dishes**, providing more accurate **nutritional tracking** tailored to the region.
 
 ### **Personalized Recommendations:**
 - The app integrates with the backend to **display tailored food recommendations** based on daily intake and user profile.
@@ -22,6 +25,7 @@ Although most core functionality is complete, an **analytics page**—designed t
   - **Daily energy expenditure estimation** (based on step count and activity level).
   - **Target calorie deficit** (if specified by the user), allowing selection from **four weight loss targets** (0.25 to 1 kg per week, in 0.25 kg increments). Constraints are applied to **prevent unhealthy weight loss plans**.
   - **Medical conditions** (e.g., high cholesterol, dietary restrictions) that affect recommendations.
+- **Considers local dietary habits**, ensuring recommendations align with **cultural eating patterns and food availability in Singapore**.
 
 ### **Analytics (Incomplete):**
 - Due to time constraints, the **analytics page remains incomplete** and will not be finished before the deadline.
@@ -94,6 +98,7 @@ This command **launches the application in your default browser**. The frontend 
 - **Ensure the FastAPI backend is running on port 8000** before starting the frontend.
 - **The analytics page is currently incomplete** due to lack of time before the deadline.
 - **Material-UI** is used for styling and UI components.
+- **Designed specifically for Singaporean users**, making food tracking and recommendations more relevant compared to generic international apps.
 
 ---
 
