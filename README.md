@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# DLW-Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**DLW-Frontend** is the React-based user interface for the **DLW project**. This application allows users to **record and track their daily food intake, view nutritional analytics, and receive personalized recommendations** from the backend. Although most core functionality is complete, an **analytics page**—designed to analyze user behavior (e.g., identifying days with consistent overeating) and optimize recommendations based on schedules—**is currently incomplete** due to time constraints.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Overview
 
-### `npm start`
+### **Food Tracking:**
+- Users can **add food items** (either via image upload or manual input) to record their daily intake.
+- Nutritional information is fetched automatically through the **FastAPI backend**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Personalized Recommendations:**
+- The app integrates with the backend to **display tailored food recommendations** based on daily intake and user profile.
+- Includes **key nutritional summaries** to help users make informed dietary choices.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **Analytics (Incomplete):**
+- An **analytics page** is in development.
+- Its intended purpose is to **analyze user behavior** (e.g., consistent overeating on certain days) and suggest modifications—such as recommending **lighter meals** or **smaller portions** to balance out eating habits.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prerequisites
 
-### `npm run build`
+Ensure you have the following installed:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Node.js (v12 or higher)**
+- **npm** (Node Package Manager)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Setup
 
-### `npm run eject`
+### Clone the Repository:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+git clone https://github.com/jonechong/dlw-frontend.git
+cd dlw-frontend
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Install Dependencies:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## Running the Application
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Start the React development server on the default port (**3000**) by running:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+This command **launches the application in your default browser**. The frontend interacts with the **FastAPI backend** (which should be running on **port 8000**) for all API calls.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+├── public                  # Static assets and index.html
+├── src
+│   ├── components          # Reusable React components (e.g., FoodItem, RecommendationList)
+│   ├── contexts            # Context providers (e.g., ProfileContext, FoodRecordsContext)
+│   ├── pages
+│   │   ├── MainPage.js     # Main food tracking and recommendation page
+│   │   └── Analytics.js    # Incomplete analytics page (future work)
+│   ├── App.js              # Root component setting up routing and context providers
+│   └── index.js            # Application entry point
+├── package.json            # Frontend dependencies and scripts
+└── README.md               # This documentation file
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Notes
 
-### Advanced Configuration
+- **Ensure the FastAPI backend is running on port 8000** before starting the frontend.
+- **The analytics page is currently incomplete** but will be updated in future iterations.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
